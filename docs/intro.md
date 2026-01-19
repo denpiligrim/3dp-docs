@@ -2,46 +2,49 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Introduction
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Inbound generator for **3x-ui**.
 
-## Getting Started
+## About the Project
 
-Get started by **creating a new site**.
+### Overview
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+A utility for auto-generating inbound connections for the [3x-ui](https://github.com/MHSanaei/3x-ui) panel, creating a single subscription URL, and configuring traffic forwarding from an intermediate server to the main server.
 
-### What you'll need
+Check out the full review of the utility on YouTube.
 
-- [Node.js](https://nodejs.org/en/download/) version 20.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ErAD0Kr3lS4?si=0nEvD_InrCoCcC_r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Generate a new site
+### Key Goals
 
-Generate a new Docusaurus site using the **classic template**.
+The main goal of the utility is to make your traffic appear non-uniform. The bot generates 10 connection entries at a configured interval with varying parameters:
 
-The classic template will automatically be added to your project after you run the command:
+- Protocols: `vless`, `vmess`, `shadowsocks`, `trojan`;
+- Ports: `443`, `8443` (fixed) and random ports from the range `10000-60000`;
+- Transport: `tcp`, `websocket`, `grpc`, `xhttp`;
+- SNI values are taken from a whitelist of domains (`whitelist`); you can use your own list.
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+All generated connections are combined into a single subscription with a static URL. The bot works with the `3x-ui` panel using its public API and does not directly modify the panel internals.
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+The secondary goal is connection stability: the client receives 10 alternate connection options and can choose any of them.
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+Additionally, the bot can be used in a cascading setup. The forwarding service will automatically configure the subscription and traffic redirection to the main server.
 
-## Start your site
+## Recommendations
 
-Run the development server:
+- Use HTTPS for the subscription (domain + SSL certificate).
+- Set the generation interval to ≥ 10 minutes; for stability, once per day (1440 minutes) is recommended.
+- Configure the client to check for updates more frequently (for example, hourly) to stay synchronized with the server.
 
-```bash
-cd my-website
-npm run start
-```
+## Support the Project
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+- Donation / payment details:
+  - MIR card: `2204320436318077`
+  - MasterCard: `5395452209474530`
+  - PayPal: `vasiljevdenisx@gmail.com`
+  - USDT | ETH (ERC20 | BEP20): `0x6fe140040f6Cdc1E1Ff2136cd1d60C0165809463`
+  - USDT | TRX (TRC20): `TEWxXmJxvkAmhshp7E61XJGHB3VyM9hNAb`
+  - Bitcoin: `bc1qctntwncsv2yn02x2vgnkrqm00c4h04c0afkgpl`
+  - TON: `UQCZ3MiwyYHXftPItMMzJRYRiKHugr16jFMq2nfOQOOoemLy`
+  - Bybit ID: `165292278`

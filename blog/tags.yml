@@ -1,19 +1,19 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+v1.0.1:
+  label: v1.0.1
+  permalink: /v1.0.1
+  description: Release
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+v1.0.2:
+  label: v1.0.2
+  permalink: /v1.0.2
+  description: Release
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+utility:
+  label: Utility
+  permalink: /utility
+  description: 3DP-MANAGER utility
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+panel:
+  label: Panel
+  permalink: /panel
+  description: 3DP-MANAGER panel

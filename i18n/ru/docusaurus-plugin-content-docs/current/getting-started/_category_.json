@@ -1,0 +1,10 @@
+{
+  "label": "Начало работы",
+  "position": 3,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "slug": "/getting-started",
+    "description": "Инструкции по установке и использованию утилиты."
+  }
+}

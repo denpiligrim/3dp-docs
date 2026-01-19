@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "Блог",
+    "description": "Название блога, используемое в SEO"
+  },
+  "description": {
+    "message": "Блог",
+    "description": "Описание блога, используемое в SEO"
+  },
+  "sidebar.title": {
+    "message": "Похожие посты",
+    "description": "Метка для левой боковой панели"
+  }
+}

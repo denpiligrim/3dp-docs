@@ -1,0 +1,19 @@
+v1.0.1:
+  label: v1.0.1
+  permalink: /v1.0.1
+  description: Выпуск
+
+v1.0.2:
+  label: v1.0.2
+  permalink: /v1.0.2
+  description: Релиз
+
+utility:
+  label: Утилита
+  permalink: /utility
+  description: Утилита 3DP-MANAGER
+
+panel:
+  label: Панель
+  permalink: /panel
+  description: Панель 3DP-MANAGER

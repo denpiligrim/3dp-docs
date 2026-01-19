@@ -2,51 +2,65 @@ import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import Translate, {translate} from '@docusaurus/Translate';
+
+import img1 from '@site/static/img/rocket.png';
+import img2 from '@site/static/img/train.png';
+import img3 from '@site/static/img/boat.png';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  png: React.ComponentType<React.ComponentProps<'svg'>>;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: translate({
+      message: 'Quick Start',
+      id: 'homepage.features.quickStart.title',
+    }),
+    png: img1,
     description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
+      <Translate id="homepage.features.quickStart.description">
+        Install the utility with a single command and get a fully configured auto-generation system. 
+        3DP-MANAGER deploys the necessary containers and starts working with your 3x-ui panel immediately.
+      </Translate>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: translate({
+      message: 'Smart Obfuscation',
+      id: 'homepage.features.smartObfuscation.title',
+    }),
+    png: img2,
     description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
+      <Translate id="homepage.features.smartObfuscation.description">
+        Make your traffic unique. The utility automatically creates 10 connections 
+        with different protocols (vless, vmess, shadowsocks, trojan), ports, and transports to avoid blocking.
+      </Translate>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: translate({
+      message: 'Unified Subscription',
+      id: 'homepage.features.unifiedSubscription.title',
+    }),
+    png: img3,
     description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
+      <Translate id="homepage.features.unifiedSubscription.description">
+        Forget about manual client configuration. All generated connections are combined into a single subscription 
+        with a static URL, providing users with stable access and a choice of the best servers.
+      </Translate>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, png, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <img src={png} className={styles.featureSvg} role="img" />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>

@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "3DP-MANAGER",
+    "description": "Заголовок в панели навигации"
+  },
+  "logo.alt": {
+    "message": "Логотип 3DP-MANAGER",
+    "description": "Альтернативный текст логотипа панели навигации"
+  },
+  "item.label.Docs": {
+    "message": "Документация",
+    "description": "Элемент панели навигации с меткой Docs"
+  },
+  "item.label.Blog": {
+    "message": "Блог",
+    "description": "Элемент панели навигации с меткой Блог"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Элемент панели навигации с меткой GitHub"
+  }
+}

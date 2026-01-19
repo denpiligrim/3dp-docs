@@ -1,0 +1,30 @@
+{
+  "version.label": {
+    "message": "Следующая",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Features & Requirements": {
+    "message": "Функции и требования",
+    "description": "The label for category 'Features & Requirements' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Features & Requirements.link.generated-index.description": {
+    "message": "Что нужно для начала работы?",
+    "description": "The generated-index page description for category 'Features & Requirements' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Getting Started": {
+    "message": "Начало работы",
+    "description": "The label for category 'Getting Started' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Getting Started.link.generated-index.description": {
+    "message": "Инструкции по установке и использованию утилиты.",
+    "description": "The generated-index page description for category 'Getting Started' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Maintenance": {
+    "message": "Обслуживание",
+    "description": "The label for category 'Maintenance' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Maintenance.link.generated-index.description": {
+    "message": "Обновление и поддержка в актуальном состоянии.",
+    "description": "The generated-index page description for category 'Maintenance' in sidebar 'tutorialSidebar'"
+  }
+}

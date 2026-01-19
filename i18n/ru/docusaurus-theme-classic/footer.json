@@ -1,0 +1,58 @@
+{
+  "link.title.Docs": {
+    "message": "Документация",
+    "description": "Заголовок столбца ссылок в нижнем колонтитуле с title=Docs в нижнем колонтитуле"
+  },
+  "link.title.Community": {
+    "message": "Комьюнити",
+    "description": "Заголовок столбца ссылок в нижнем колонтитуле с title=Community в нижнем колонтитуле"
+  },
+  "link.title.More": {
+    "message": "Дополнительно",
+    "description": "Заголовок столбца ссылок в нижнем колонтитуле с title=More в нижнем колонтитуле"
+  },
+  "link.item.label.Introduction": {
+    "message": "Введение",
+    "description": "Метка ссылки в нижнем колонтитуле с label=Введение, ведущей на /docs/intro"
+  },
+  "link.item.label.Getting Started": {
+    "message": "Начало работы",
+    "description": "Метка ссылки в нижнем колонтитуле с меткой label=Getting Started, ведущей на /docs/getting-started"
+  },
+  "link.item.label.Contributing": {
+    "message": "Внести вклад",
+    "description": "Метка ссылки в нижнем колонтитуле с меткой label=Contributing, ведущей на /docs/contributing"
+  },
+  "link.item.label.Telegram": {
+    "message": "Telegram",
+    "description": "Метка ссылки в нижнем колонтитуле с меткой label=Telegram, ведущей на https://t.me/denpiligrim_web"
+  },
+  "link.item.label.YouTube": {
+    "message": "YouTube",
+    "description": "Метка ссылки в нижнем колонтитуле с меткой label=YouTube, ведущей на https://t.me/denpiligrim_web"
+  },
+  "link.item.label.Author's website": {
+    "message": "Сайт автора",
+    "description": "Метка ссылки в нижнем колонтитуле с меткой label=Сайт автора, ведущая на https://denpiligrim.ru"
+  },
+  "link.item.label.Blog": {
+    "message": "Блог",
+    "description": "Метка ссылки в нижнем колонтитуле с меткой label=Blog, ведущей на /blog"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Метка ссылки в нижнем колонтитуле с меткой label=GitHub, ведущей на https://github.com/denpiligrim/3dp-manager"
+  },
+  "link.item.label.Stack Overflow": {
+    "message": "Stack Overflow",
+    "description": "Метка ссылки в нижнем колонтитуле с меткой label=Stack Overflow, ведущей на https://stackoverflow.com/u/22850947"
+  },
+  "copyright": {
+    "message": "Copyright © 2026 3DP-MANAGER by DenPiligrim.",
+    "description": "Авторские права в нижнем колонтитуле"
+  },
+  "logo.alt": {
+    "message": "Логотип 3DP-MANAGER",
+    "description": "Альтернативный текст логотипа в нижнем колонтитуле"
+  }
+}

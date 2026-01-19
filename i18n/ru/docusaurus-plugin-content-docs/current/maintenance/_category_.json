@@ -1,0 +1,9 @@
+{
+  "label": "Техническое обслуживание",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "slug": "/maintenance",
+    "description": "Обновление и удаление утилиты."
+  }
+}
