@@ -126,7 +126,7 @@ const config: Config = {
             },
             {
               label: 'YouTube',
-              href: 'https://t.me/denpiligrim_web',
+              href: 'https://www.youtube.com/@denpiligrim',
             },
             {
               label: "Author's website",

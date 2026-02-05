@@ -50,12 +50,12 @@ export default function Home(): ReactNode {
     <Layout
       // 3. Перевод мета-тегов
       title={translate({
-        message: 'Hello from {siteTitle}',
+        message: '{siteTitle} utility',
         id: 'homepage.title',
         description: 'The homepage title',
       }, {siteTitle: siteConfig.title})}
       description={translate({
-        message: 'Description will go into a meta tag in <head />',
+        message: 'Inbound generator for 3x-ui',
         id: 'homepage.description',
         description: 'The homepage description',
       })}>
