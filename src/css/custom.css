@@ -31,3 +31,13 @@
   
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.container-youtube {
+    display: flex;
+    justify-content: center;
+}
+    
+iframe {
+    aspect-ratio: 16 / 9;
+    width: 100% !important;
+}

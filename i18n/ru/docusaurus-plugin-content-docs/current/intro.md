@@ -14,7 +14,7 @@ sidebar_position: 1
 
 Посмотрите полный обзор утилиты на YouTube.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ErAD0Kr3lS4?si=0nEvD_InrCoCcC_r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="container-youtube"><iframe src="https://www.youtube.com/embed/7W4mFMDbHjw?si=OeWFpRnEKZdEtPpt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 ### Основные цели
 
