@@ -8,6 +8,16 @@ v1.0.2:
   permalink: /v1.0.2
   description: Release
 
+v2.0.0:
+  label: v2.0.0
+  permalink: /v2.0.0
+  description: Release
+
+v2.0.1:
+  label: v2.0.1
+  permalink: /v2.0.1
+  description: Release
+
 utility:
   label: Utility
   permalink: /utility

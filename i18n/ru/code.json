@@ -8,7 +8,7 @@
     "description": "Label for the Get Started button"
   },
   "homepage.title": {
-    "message": "Привет от {siteTitle}",
+    "message": "Генератор инбаундов",
     "description": "The homepage title"
   },
   "homepage.description": {
