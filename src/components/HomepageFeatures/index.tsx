@@ -3,14 +3,11 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 import Translate, {translate} from '@docusaurus/Translate';
-
-import img1 from '@site/static/img/rocket.png';
-import img2 from '@site/static/img/train.png';
-import img3 from '@site/static/img/boat.png';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 type FeatureItem = {
   title: string;
-  png: React.ComponentType<React.ComponentProps<'svg'>>;
+  png: string;
   description: ReactNode;
 };
 
@@ -20,24 +17,24 @@ const FeatureList: FeatureItem[] = [
       message: 'Quick Start',
       id: 'homepage.features.quickStart.title',
     }),
-    png: img1,
+    png: '/img/rocket.png',
     description: (
       <Translate id="homepage.features.quickStart.description">
-        Install the utility with a single command and get a fully configured auto-generation system. 
-        3DP-MANAGER deploys the necessary containers and starts working with your 3x-ui panel immediately.
+        Install with one command, then connect your 3x-ui nodes through the Web UI.
+        Manage subscriptions, clients, and relay servers from one interface.
       </Translate>
     ),
   },
   {
     title: translate({
-      message: 'Smart Obfuscation',
+      message: 'Flexible Connections',
       id: 'homepage.features.smartObfuscation.title',
     }),
-    png: img2,
+    png: '/img/train.png',
     description: (
       <Translate id="homepage.features.smartObfuscation.description">
-        Make your traffic unique. The utility automatically creates 10 connections 
-        with different protocols (vless, vmess, shadowsocks, trojan), ports, and transports to avoid blocking.
+        Configure VLESS, VMess, Shadowsocks, Trojan, and Hysteria2 connections.
+        Choose nodes, relays, ports, and SNI, and follow background generation in the Journal.
       </Translate>
     ),
   },
@@ -46,21 +43,22 @@ const FeatureList: FeatureItem[] = [
       message: 'Unified Subscription',
       id: 'homepage.features.unifiedSubscription.title',
     }),
-    png: img3,
+    png: '/img/boat.png',
     description: (
       <Translate id="homepage.features.unifiedSubscription.description">
-        Forget about manual client configuration. All generated connections are combined into a single subscription 
-        with a static URL, providing users with stable access and a choice of the best servers.
+        Combine connections from multiple nodes in a subscription with a permanent URL.
+        Bind 3x-ui clients, view traffic limits, and add Happ or INCY routing profiles.
       </Translate>
     ),
   },
 ];
 
 function Feature({title, png, description}: FeatureItem) {
+  const imageUrl = useBaseUrl(png);
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <img src={png} className={styles.featureSvg} role="img" />
+        <img src={imageUrl} className={styles.featureSvg} role="img" />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>

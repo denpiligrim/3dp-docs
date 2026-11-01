@@ -16,6 +16,14 @@ yarn start
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
+To start the Russian translation:
+
+```bash
+npm run start:ru
+```
+
+Open `http://localhost:3000/ru/docs/intro` for the Russian documentation.
+
 ## Build
 
 ```bash

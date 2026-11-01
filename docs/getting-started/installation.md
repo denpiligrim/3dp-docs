@@ -4,33 +4,26 @@ sidebar_position: 1
 
 # Installation
 
-:::warning
-
-The utility runs on the main server
-
-:::
+These instructions cover **3DP-MANAGER v3.0.0**. Prepare an Ubuntu or Debian server with root access and one or more reachable 3x-ui panels. See [System Requirements](../features-requirements/requirements.md).
 
 ## Quick installation
 
-You must have the following packages installed on your server `curl`, `jq` using the command: `apt install curl jq` control  `3x-ui`, which can be installed using the command: `bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)`
-Install the project on the server using the command:
+Run as root on the server hosting 3DP-MANAGER:
 
-```bash title="bash"
+```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/denpiligrim/3dp-manager/main/install.sh)
 ```
 
-<small>Runs the installer script and deploys containers and services.</small>
+The interactive installer installs Docker and Docker Compose if necessary, then deploys PostgreSQL, the backend, and the frontend in `/opt/3dp-manager`.
 
-## If the panel is in a Docker container
+Choose HTTP or HTTPS with Let's Encrypt, your own certificate, or a self-signed certificate. The installer prints the interface URL, port, administrator username, and password. Sign in at that URL and change the password under **Settings**.
 
-If the 3x-ui panel is located in a Docker container, install it with the command:
+## Connect your panels
 
-```bash title="bash"
-REMOTE_PANEL=true bash <(curl -fsSL https://raw.githubusercontent.com/denpiligrim/3dp-manager/main/install.sh)
-```
+Add your 3x-ui panels under **Nodes** after installation. Enter the panel URL and token or username/password credentials. A panel may run on another server or in Docker as long as its API is reachable.
 
-<small>The command installs a utility for the panel located in the Docker container.</small>
+Continue with [Usage](usage.md) to configure nodes, domains, and subscriptions. For an intermediate server, follow [Forwarding Setup](forwarding-setup.md).
 
-## Problem with installing Docker
+## Docker installation problems
 
-If you encounter problems with installing Docker while running the script, install it yourself by following the [official Docker documentation](https://docs.docker.com/engine/install/).
+If automatic Docker installation fails, follow the [official Docker installation instructions](https://docs.docker.com/engine/install/) for your distribution, then rerun the installer.

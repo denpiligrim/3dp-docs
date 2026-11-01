@@ -4,37 +4,30 @@ sidebar_position: 3
 
 # Forwarding Setup
 
-The forwarding service allows you to redirect traffic to the main server and is used in a VPN cascade scheme. The tool redirects all `TCP` and `UDP` packets on the following ports: `443`, `8443`, `10000:60000`. In addition, automatic redirection of the subscription URL is performed.
+A relay forwards traffic from an intermediate server to a selected 3x-ui node. Forwarding runs on the **intermediate server**, which requires SSH access for setup through the Web UI.
 
-:::warning
-The forwarding service runs on the intermediate server
+## Setup through the interface
 
-:::
+Under **Relay servers**, add the intermediate server by domain or IP, select its destination node, and install forwarding. The backend attempts to resolve a domain to an IP automatically. Assign the relay to the desired inbounds in **Subscriptions**.
 
-## Install forwarding service
+Installation and removal run in the background; track results under **Journal**. Copy subscription URLs from **Subscriptions**.
 
-The forwarding service allows proxying incoming ports from the intermediate server to the primary server.
+## Manual installation
+
+On the intermediate server, replace `IP_ADDRESS` with the destination node's IP:
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/denpiligrim/3dp-manager/main/forwarding_install.sh)
+sudo ORIGIN_IP="IP_ADDRESS" bash -c "$(curl -fsSL https://raw.githubusercontent.com/denpiligrim/3dp-manager/main/forwarding_install.sh)"
 ```
 
-<small>Summary: adds forwarding rules and creates a service to update the subscription.</small>
+The script configures UFW/NAT forwarding for TCP and UDP ports `443`, `8443`, and `10000–60000`. For other fixed inbound ports, configure the corresponding firewall and forwarding rules separately.
 
-## Remove forwarding service
+## Remove forwarding
+
+Use the Web UI or run as root on the intermediate server:
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/denpiligrim/3dp-manager/main/forwarding_delete.sh)
 ```
 
-<small>Summary: removes the rules and disables the forwarding service.</small>
-
-## Show subscription URL
-
-Command to print the current subscription URL from the container environment:
-
-```bash
-cd /opt/3dp-manager && docker compose exec node env | grep SUB_URL | cut -d'=' -f2
-```
-
-<small>Summary: prints the static subscription URL that can be used by clients. Works on both primary and intermediate servers.</small>
+The script restores UFW rules from its backup when available, removes forwarding rules, disables IP forwarding, reloads UFW, and schedules a reboot. Plan for the intermediate server to disconnect.
