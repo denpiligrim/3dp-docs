@@ -7,7 +7,7 @@ tags: [v1.0.2, utility]
 
 * ошибка исправлена [@denpiligrim](https://github.com/denpiligrim) в [#6](https://github.com/denpiligrim/3dp-manager/pull/6)
 
-<!-- truncate -->
+{/* truncate */}
 
 - Проверка URL
 - Загрузка rotate.js

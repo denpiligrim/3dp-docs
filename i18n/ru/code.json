@@ -20,15 +20,15 @@
     "description": "Title for Quick Start feature"
   },
   "homepage.features.quickStart.description": {
-    "message": "Установите утилиту одной командой и получите полностью настроенную систему автогенерации. 3DP-MANAGER разворачивает необходимые контейнеры и сразу начинает работу с вашей панелью 3x-ui.",
+    "message": "Установите приложение одной командой и подключите ноды 3x-ui через веб-интерфейс. Управляйте подписками, клиентами и relay-серверами в одном месте.",
     "description": "Description for Quick Start feature"
   },
   "homepage.features.smartObfuscation.title": {
-    "message": "Умная маскировка",
+    "message": "Гибкие подключения",
     "description": "Title for Smart Obfuscation feature"
   },
   "homepage.features.smartObfuscation.description": {
-    "message": "Сделайте ваш трафик уникальным. Утилита автоматически создает 10 подключений с разными протоколами (vless, vmess, shadowsocks, trojan), портами и транспортами, чтобы избежать блокировок.",
+    "message": "Настраивайте подключения VLESS, VMess, Shadowsocks, Trojan и Hysteria2. Выбирайте ноды, relay, порты и SNI, следите за фоновой генерацией в Журнале.",
     "description": "Description for Smart Obfuscation feature"
   },
   "homepage.features.unifiedSubscription.title": {
@@ -36,7 +36,7 @@
     "description": "Title for Unified Subscription feature"
   },
   "homepage.features.unifiedSubscription.description": {
-    "message": "Забудьте о ручной настройке клиентов. Все сгенерированные подключения объединяются в одну подписку со статичным URL, обеспечивая пользователям стабильный доступ и выбор лучших серверов.",
+    "message": "Объединяйте подключения нескольких нод в подписку с постоянным URL. Привязывайте клиентов 3x-ui, просматривайте лимиты трафика и добавляйте профили маршрутизации Happ или INCY.",
     "description": "Description for Unified Subscription feature"
   },
   "theme.ErrorPageContent.title": {

@@ -1,23 +1,25 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # Uninstalling
 
-## Remove utility
+## Remove 3DP-MANAGER
 
-Remove the service completely:
+Copy any database backups you need outside `/opt/3dp-manager` before removal. Run as root:
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/denpiligrim/3dp-manager/main/delete.sh)
 ```
 
-<small>Short description: removes containers and configuration files, restoring the system to the pre-install state.</small>
+This removes the project containers, database volume, and `/opt/3dp-manager`, **including backups inside that directory**.
 
-## Remove forwarding service
+## Remove relay forwarding
+
+Remove forwarding separately on the intermediate server through the Web UI before uninstalling the manager, or run on that server:
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/denpiligrim/3dp-manager/main/forwarding_delete.sh)
 ```
 
-<small>Short description: removes rules and disables the forwarding service.</small>
+The script reloads UFW and schedules a reboot. See [Forwarding Setup](../getting-started/forwarding-setup.md).

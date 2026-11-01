@@ -4,38 +4,25 @@ sidebar_position: 1
 
 # Introduction
 
-Inbound generator for **3x-ui**.
+**3DP-MANAGER v3.0.0** is a web application for managing connections and subscriptions through the [3x-ui](https://github.com/MHSanaei/3x-ui) API. It combines inbounds from multiple nodes into subscriptions with permanent URLs and updates them manually or on a schedule.
 
-## About the Project
+## About the project
 
-### Overview
+Configure nodes, relay servers, SNI domains, and subscriptions in the Web UI. The subscription wizard can bind an existing 3x-ui client or create one automatically, with traffic statistics, limits, and expiration information. Add up to 20 items per subscription, including external links and Happ or INCY routing profiles.
 
-A utility for auto-generating inbound connections for the [3x-ui](https://github.com/MHSanaei/3x-ui) panel, creating a single subscription URL, and configuring traffic forwarding from an intermediate server to the main server.
+Supported protocols include VLESS, VMess, Shadowsocks, Trojan, and Hysteria2. Choose the node, relay, port, flag, and name per inbound. Generation and deletion run as background tasks with progress and results in the Journal. Rotation prepares new inbounds before removing old ones.
+
+Start with [Installation](getting-started/installation.md), then follow [Usage](getting-started/usage.md). See [Features](features-requirements/features.md) for the overview and [Updating](maintenance/updating.md) when upgrading an existing installation.
 
 Check out the full review of the utility on YouTube.
 
-<div class="container-youtube"><iframe src="https://www.youtube.com/embed/7W4mFMDbHjw?si=OeWFpRnEKZdEtPpt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-
-### Key Goals
-
-The main goal of the utility is to make your traffic appear non-uniform. The bot generates 10 connection entries at a configured interval with varying parameters:
-
-- Protocols: `vless`, `vmess`, `shadowsocks`, `trojan`;
-- Ports: `443`, `8443` (fixed) and random ports from the range `10000-60000`;
-- Transport: `tcp`, `websocket`, `grpc`, `xhttp`;
-- SNI values are taken from a whitelist of domains (`whitelist`); you can use your own list.
-
-All generated connections are combined into a single subscription with a static URL. The bot works with the `3x-ui` panel using its public API and does not directly modify the panel internals.
-
-The secondary goal is connection stability: the client receives 10 alternate connection options and can choose any of them.
-
-Additionally, the bot can be used in a cascading setup. The forwarding service will automatically configure the subscription and traffic redirection to the main server.
+<div class="container-youtube"><iframe src="https://www.youtube.com/embed/pEYpKhH_Q6Y?si=wPcRUy3G0_UPx0QI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 ## Recommendations
 
-- Use HTTPS for the subscription (domain + SSL certificate).
-- Set the generation interval to ≥ 10 minutes; for stability, once per day (1440 minutes) is recommended.
-- Configure the client to check for updates more frequently (for example, hourly) to stay synchronized with the server.
+- Use HTTPS for subscription access.
+- Set the rotation interval to at least 10 minutes; daily rotation (1440 minutes) is recommended for stability.
+- Refresh subscriptions in your client more frequently, for example hourly.
 
 ## Support the Project
 

@@ -6,6 +6,8 @@ sidebar_position: 5
 
 ## Contribution guide
 
+Contribute to the [3dp-manager repository](https://github.com/denpiligrim/3dp-manager). Use the current v3.0.0 behavior as the reference when reporting issues or proposing documentation changes.
+
 Contributions are welcome! Simple contributor workflow:
 
 1. Fork the repository on GitHub.
@@ -19,6 +21,8 @@ Contributions are welcome! Simple contributor workflow:
 ---
 
 ## Discussion
+
+For bug reports, include the 3DP-MANAGER and 3x-ui versions, reproduction steps, and the relevant Journal status or error. Remove credentials and private subscription URLs before sharing diagnostics.
 
 - Telegram: [@denpiligrim_web](https://t.me/denpiligrim_web)
 - Issues on [GitHub](https://github.com/denpiligrim/3dp-manager/issues)
